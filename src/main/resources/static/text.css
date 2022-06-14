@@ -1,6 +1,8 @@
 .iceland-content {
     font-family: Iceland;
     text-align: center;
+    margin-right: 300px;
+    margin-left: 300px;
     font-size: 1.4vw;
 }
 
@@ -8,6 +10,11 @@
     font-family: Iceland;
     font-size: 2.4vw;
     color: black;
+}
+
+textarea {
+    height: 1700px;
+    font-family: Iceland;
 }
 
 .iceland-title {

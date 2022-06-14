@@ -9,10 +9,12 @@
     <link rel="stylesheet" type="text/css" th:href="@{../post-edit.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{../button.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{../text.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{../position.css}"/>
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
           crossorigin="anonymous"/>
+    <script src="https://cdn.ckeditor.com/4.11.1/full-all/ckeditor.js"></script>
 </head>
 <body class="body">
 <header>
@@ -24,35 +26,24 @@
         <a class="iceland-menu" href="/">Contact</a>
     </div>
 </header>
-
-
-<div class="container">
-    <hr/>
-    <div class="container">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-md-8 mt-5">
-                    <form th:action="@{/edit}" th:object="${post}" th:method="POST">
-                        <h3 class="iceland-title" style="color: white">Post</h3>
-                        <div class="form-group">
-                            <input type="text" name="title" placeholder="Title" autocomplete="off" class="form-control iceland-input"
-                                   style="font-size: 1.5vw" field="*{title}"/>
-                        </div>
-
-                        <div class="form-group">
-                            <textarea type="text" rows="4" name="content" placeholder="Content" class="form-control iceland-input"
-                                      style="font-size: 1.3vw" field="*{content}" autocomplete="off"></textarea>
-                        </div>
-
-                        <button type="submit" name="submit" value="submit" class="button button-1">Send</button>
-                        <button type="submit" name="remove" value="remove" class="button button-1">Remove</button>
-                    </form>
-                </div>
-            </div>
-
-        </div>
-
-        <hr/>
+<form th:action="@{/edit}" th:object="${post}" th:method="POST" class="edit-margin">
+    <h3 class="iceland-title" style="color: white">Post</h3>
+    <div>
+        <input type="text" name="title" placeholder="Title"
+                class="iceland-input"
+                style="font-size: 1.5vw" field="*{title}"/>
+    </div>
+    <div style="margin-top: 10px; margin-bottom: 10px">
+        <textarea type="text" id="myeditor" name="content" placeholder="Content"
+              style="font-size: 1.3vw" field="*{content}"></textarea>
+    </div>
+    <button type="submit" name="submit" value="submit" class="button button-1">Send</button>
+    <button type="submit" name="remove" value="remove" class="button button-1">Remove</button>
+</form>
+<script>
+    window.onload = function () {
+        CKEDITOR.replace('myeditor');
+    };
+</script>
 </body>
 </html>
