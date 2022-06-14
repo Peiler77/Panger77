@@ -98,6 +98,9 @@ public class PostServiceImpl implements PostService {
     @Override
     public List<PostDto> getAllPosts() {
         List<PostDto> PostsDto = new ArrayList<>();
+        if(postRepository.findAll().isEmpty()) {
+            return null;
+        }
         for (Post post : postRepository.findAll()) {
             PostDto postDto = new PostDto();
             postDto.setId(post.getId());

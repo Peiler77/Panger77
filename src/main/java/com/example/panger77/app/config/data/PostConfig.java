@@ -16,7 +16,7 @@ public class PostConfig {
         this.postService = postService;
     }
 
-    @Bean
+  /*  @Bean
     public void createUser() {
         PostDto postDto = new PostDto();
         postDto.setTitle("Title about Peiler77");
@@ -43,4 +43,6 @@ public class PostConfig {
         postDto4.setContent("I am a Sanya Pupkin");
         postService.save(postDto4);
     }
+
+   */
 }
