@@ -3,6 +3,4 @@ A blog site and web application for creating and editing posts, saving publicati
 
 ![Animation4](https://user-images.githubusercontent.com/73635745/173608699-8273b2d6-379a-4914-b162-9b19e0104f5f.gif)
 
-API URL
 
-GET localhost:2022/get/posts Return all blog posts
