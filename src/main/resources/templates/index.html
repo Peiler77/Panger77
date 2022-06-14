@@ -26,7 +26,7 @@
 <div class="jumbotron bg-dark text-white" th:each="post: ${posts}">
     <h1 class="iceland-title" th:text="${post.title}">Title</h1>
     <p class="iceland-date" th:text="${post.date}">Date</p>
-    <p class="iceland-content" th:text="${post.content}">Body</p>
+    <p class="iceland-content" th:utext="${post.content}">Content</p>
     <a th:href="@{/removeById(id=${post.id})}" class="button button-1 right">Remove</a>
 </div>
 
