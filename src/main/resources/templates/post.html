@@ -26,7 +26,7 @@
         <a class="iceland-menu" href="/">Contact</a>
     </div>
 </header>
-<form th:action="@{/edit}" th:object="${post}" th:method="POST" class="edit-margin">
+<form th:action="@{/save}" th:object="${post}" th:method="POST" class="edit-margin">
     <h3 class="iceland-title" style="color: white">Post</h3>
     <div>
         <input type="text" name="title" placeholder="Title"

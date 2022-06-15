@@ -1,0 +1,10 @@
+.center {
+    text-align: center;
+}
+
+.edit-margin {
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 200px;
+    position: center;
+}
