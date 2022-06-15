@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+
+body{
+    background-image: linear-gradient(-90deg, #912132, #3f3350);
+}
+
+
+.pos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.maincontent{  
+    justify-content: center;
+    padding-top: 90px;
+}
+
+.btcard {
+    border-radius: 10px;
+    height: 40px;
+    width: 100px;
+    font-family: Iceland;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btncard1 {
+    color: #c2c2c2;
+    border: 3px solid #38383f; 
+    background-image: -webkit-linear-gradient(30deg, #3a3946 50%, transparent 50%);
+    background-image: linear-gradient(30deg, #383942 50%, transparent 50%);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    -webkit-transition: background 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out; 
+}
+
+.btncard1:hover {
+    background-position: 100%;
+    color: #1e1e21;
+    background-image: linear-gradient(-90deg, #912132, #3f3350);
+}
+
+.card{
+    justify-content: space-between;
+    margin-top: 25px;
+    display: flex;
+    background: rgb(46, 44, 54);
+    height: 300px;
+    width: 1280px;
+    border-radius: 15px;
+}
+.data2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.data{
+    width: 172px;
+}
+
+.time{
+    padding-left: 15px;
+}
+
+.butt{
+    display: flex;
+    align-items: flex-start;
+}
+
+.card-img{
+    height: 100%;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.textdiv2{    
+    padding-top: 10px;
+    padding-right: 420px;
+}
+

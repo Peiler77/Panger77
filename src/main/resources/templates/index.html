@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panger77</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="style/css/style.css">
+    <link rel="stylesheet" type="text/css" th:href="@{../index.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{../panel.css}"/>
 </head>
-<body>
+<body style="overflow-x: hidden;">
     <div class="wrapper">
         <!--Панель навигации-->
         <div class="panel">
@@ -18,19 +19,65 @@
                 <a class="portfolio" href="/">Portfolio</a>
                 <a class="about" href="/about">About</a>
                 <a class="contact" href="/">Contact</a>
+                <div class="auth">
+                    <div class="aut">
+                        <a class="login" href="/">Sign In</a>
+                        <a class="register" href="/l">Sign Up</a>
+                    </div>
+                </div>
             </div>
         </div>
+
         <!--Main контент-->
         <div class="maincontent">
+            <div class="pos">
+                <div class="card">
+                    <img class="card-img" src="https://cdn.discordapp.com/attachments/973720614013657118/985540596145987684/unknown.jpeg" alt=""> 
+                    <div class="data2">
+                        <div class="data">
+                            <a class="time">Time post:15.06.2022</a>
+                        </div>
+                    </div>
+                    <div class="textdiv2">
+                        <div class="textdiv">
+                            <a class="gol">Hentai</a>
+                            <a class="text">gfjgfjhjfg fhhgfghj ghjhgjgh ghjghj ghgh jhgj ghgh hg </a>
+                        </div>  
+                    </div>
+                    <div class="butt">
+                        <div class="btn">
+                            <button class="btcard btncard1" type="submit">Remove</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img " src="https://cdn.discordapp.com/attachments/973720614013657118/985540596145987684/unknown.jpeg" alt="">
+                    <div class="data2">
+                        <div class="data">
+                            <a class="time">Time post:15.06.2022</a>
+                        </div>
+                    </div>
+                    <div class="textdiv2">
+                        <div class="textdiv">
+                            <a class="gol">Hentai</a>
+                            <a class="text">gfjgfjhjfg fhhgfghj ghjhgjgh ghjghj ghgh jhgj ghgh hg </a>
+                        </div>  
+                    </div>                
+                    <div class="butt">
+                        <div class="btn">
+                            <button class="btcard btncard1" type="submit">Remove</button>
+                        </div>
+                    </div>
 
+                </div>
+            </div>
         </div>
-        <!--тест-->
     </div>
     <script>
             $(document).ready(function() {
         $('.search-btn').click(function(e) {
-            var btn = $(this);
-            var word = jQuery("#search").val();
+            let btn = $(this);
+            let word = jQuery("#search").val();
             if (word.length > 2){
 
                 $.ajax({
@@ -50,6 +97,8 @@
         };
     });
 });
+
+
     </script>
 </body>
 </html>
