@@ -1,0 +1,18 @@
+.container {
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    display: inline-block;
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 8%;
+    margin-bottom: -30%;
+    border-radius: 10px;
+    background-color: rgb(38, 46, 54);
+    background-image: linear-gradient(to bottom, rgba(34, 34, 39, 0.336), transparent);
+    border: 1.5px solid #0003;
+    box-shadow: 0 0 50px #0003;
+}

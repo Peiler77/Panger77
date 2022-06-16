@@ -67,8 +67,8 @@ public class Panger77ControllerImpl {
         return "about";
     }
 
-    @GetMapping("/post")
+    @GetMapping("/send/post")
     public String getAddPostPage() {
-        return "post";
+        return "send-post";
     }
 }
