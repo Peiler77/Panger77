@@ -1,0 +1,70 @@
+.btn {
+    font-family: Iceland;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 45px;
+    max-width: 100px;
+    border-radius: 5px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+  }
+  .btn:hover {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  /*btn_background*/
+  .effect01 {
+    color: #FFF;
+    border: 2px solid rgb(31, 31, 36);
+    box-shadow:0px 0px 0px 1px #000 inset;
+    background-color: rgb(55, 55, 65);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .effect01:hover {
+    border: 2px solid rgb(170, 32, 32);
+    background-color: rgb(233, 38, 38);
+    box-shadow:0px 0px 0px 4px rgb(192, 38, 38) inset;
+  }
+  
+  /*btn_text*/
+  .effect01 span {
+    transition: all 0.09s ease-out;
+    z-index: 2;
+  }
+  .effect01:hover span{
+    letter-spacing: 0.13em;
+    color: #333;
+  }
+  
+  /*highlight*/
+  .effect01:after {
+    background: rgb(218, 33, 33);
+    border: 0px solid #000;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .8;
+    position: absolute;
+    top: -50px;
+    -webkit-transform: rotate(35deg);
+            transform: rotate(35deg);
+    width: 50px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);/*easeOutCirc*/
+    z-index: 1;
+  }
+  .effect01:hover:after {
+    background: #FFF;
+    border: 20px solid #000;
+    opacity: 0;
+    left: 120%;
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+  }

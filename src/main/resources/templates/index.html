@@ -1,55 +1,26 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panger77</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="style/css/style.css">
 </head>
 <body>
-    <div class="wrapper">
-        <!--Панель навигации-->
-        <div class="panel">
-            <div class="menu">
-                <a class="glitch" href="/">Panger77</a>
-                <a class="post" href="/post">Post+</a>
-                <a class="portfolio" href="/">Portfolio</a>
-                <a class="about" href="/about">About</a>
-                <a class="contact" href="/">Contact</a>
+    <div id="header">
+            <div class="panel" style="--items: 7;">
+                <a href="/">Panger77</a>
+                <a href="/send/post">Post+</a>
+                <a href="/">Portfolio</a>
+                <a href="/">About</a>
+                <a href="/">Contacts</a>
+                <span class="line"></span>
+                <a href="/">Sign In</a>
+                <a href="/">Sign Up</a>
             </div>
-        </div>
-        <!--Main контент-->
-        <div class="maincontent">
-
-        </div>
-        <!--тест-->
     </div>
-    <script>
-            $(document).ready(function() {
-        $('.search-btn').click(function(e) {
-            var btn = $(this);
-            var word = jQuery("#search").val();
-            if (word.length > 2){
-
-                $.ajax({
-                type: "post",
-                url: "",// 
-                dataType: "json",
-                data: { search: word },
-                function (data) {
-                    if(data="no"){
-                        console.log(jQuery("#ressear").html(data));
-                        alert("Ваш запрос не найден");
-                    } else {
-                        alert("")
-                    }
-                }
-            });
-        };
-    });
-});
-    </script>
+    <div class="container" th:each="post: ${posts}">
+        <h1 class="iceland-title" th:text="${post.title}">Title</h1>
+        <p class="iceland-date" th:text="${post.date}">Date</p>
+        <p class="iceland-content" th:utext="${post.content}">Content</p>
+        <a th:href="@{/removeById(id=${post.id})}" class="btn effect01">Remove</a>
+    </div>
 </body>
 </html>

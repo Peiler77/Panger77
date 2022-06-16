@@ -22,7 +22,7 @@ public class Panger77ControllerImpl {
         this.validateService = validateService;
     }
 
-    @PostMapping(value = "/edit", params = "remove")
+    @PostMapping(value = "/removeByTitle", params = "remove")
     public String remove(@ModelAttribute PostDto postDto) {
         ModelAndView mav = new ModelAndView("index");
         if (!validateService.isTextNull(postDto)) {
@@ -41,7 +41,7 @@ public class Panger77ControllerImpl {
     }
 
 
-    @PostMapping(value = "/edit")
+    @PostMapping(value = "/save")
     public String save(@ModelAttribute PostDto postDto) {
         ModelAndView mav = new ModelAndView("index");
         if (!validateService.isTextNull(postDto)) {
@@ -67,8 +67,8 @@ public class Panger77ControllerImpl {
         return "about";
     }
 
-    @GetMapping("/post")
+    @GetMapping("/send/post")
     public String getAddPostPage() {
-        return "post";
+        return "send-post";
     }
 }

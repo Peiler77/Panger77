@@ -19,26 +19,26 @@ public class PostControllerImpl  {
     }
 
 
-    @PostMapping(value = "/save/post")
+    @PostMapping(value = "/post/save")
     @ResponseStatus(HttpStatus.CREATED)
     public PostDto save(@RequestBody PostDto postDto) {
         return postService.save(postDto);
     }
 
 
-    @PutMapping(value = "/update/post")
+    @PutMapping(value = "/post/update")
     public PostDto update(@RequestBody PostDto postDto) {
         return postService.update(postDto);
     }
 
 
-    @PatchMapping(value = "/update/post/title")
+    @PatchMapping(value = "/post/title/update")
     public PostDto updateTitle(@RequestBody PostDto postDto) {
         return postService.updateTitle(postDto);
     }
 
 
-    @PatchMapping(value = "/update/post/content")
+    @PatchMapping(value = "/post/content/update")
     public PostDto updateContent(@RequestBody PostDto postDto) {
         return postService.updateContent(postDto);
     }
@@ -50,19 +50,19 @@ public class PostControllerImpl  {
     }*/
 
 
-    @GetMapping(value = "/get/post/content")
+    @GetMapping(value = "/post/get/content")
     public PostDto getPostByContent(@RequestBody PostDto postDto) {
         return postService.getPostByContent(postDto);
     }
 
 
-    @DeleteMapping(value = "/remove/post/id")
+    @DeleteMapping(value = "/post/id/remove")
     public void removePostById(@RequestBody PostDto postDto) {
         postService.removePostById(postDto.getId());
     }
 
 
-    @GetMapping(value = "/get/posts")
+    @GetMapping(value = "/posts/get")
     public List<PostDto> getAllPosts() {
         return postService.getAllPosts();
     }
