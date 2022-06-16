@@ -1,14 +1,14 @@
 .container {
     font-family: Iceland;
-    box-sizing: border-box;
     padding-top: 20px;
     padding-right: 30px;
     padding-left: 30px;
     padding-bottom: 20px;
     display: inline-block;
     color: white;
-    margin-left: 10%;
-    margin-right: 10%;
+    height: 40%;
+    width: 80%;
+    margin-left: 8%;
     margin-top: 8%;
     margin-bottom: -30%;
     border-radius: 10px;

@@ -1,32 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="../static/panel.css">
-    <link rel="stylesheet" type="text/css" href="../static/feed.css">
-    <link rel="stylesheet" type="text/css" href="../static/page.css">
-    <link rel="stylesheet" type="text/css" href="../static/text.css">
-    <link rel="stylesheet" type="text/css" href="../static/button.css">
+    <link rel="stylesheet" type="text/css" th:href="@{../panel.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{../feed.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{../page.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{../text.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{../button.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{../position.css}"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+          crossorigin="anonymous"/>
+    <script src="https://cdn.ckeditor.com/4.11.1/full-all/ckeditor.js"></script>
 </head>
 <body>
     <div id="header">
             <div class="panel" style="--items: 7;">
-                <a href="/templates/index.html">Panger77</a>
-                <a href="/templates/send-post.html">Post+</a>
-                <a href="#">Portfolio</a>
-                <a href="#">About</a>
-                <a href="#">Contacts</a>
+                <a href="/">Panger77</a>
+                <a href="/send/post">Post+</a>
+                <a href="/">Portfolio</a>
+                <a href="/">About</a>
+                <a href="/">Contacts</a>
                 <span class="line"></span>
-                <a href="#">Sign In</a>
-                <a href="#">Sign Up</a>
+                <a href="/">Sign In</a>
+                <a href="/">Sign Up</a>
             </div>
     </div>
-    <div class="container">
-        <a>
-            sometext
-        </a>
-    <button class="btn effect01">Remove</button>
-    </div>
+        <form th:action="@{/save}" th:object="${post}" th:method="POST" class="container" style="margin-left: 20%;">
+            <h3 class="iceland-title" style="color: white">Post</h3>
+            <div>
+                <input type="text" name="title" placeholder="Title"
+                       style="font-size: 1.5vw" field="*{title}"/>
+            </div>
+            <div style="margin-top: 10px; margin-bottom: 10px">
+        <textarea type="text" id="myeditor" name="content" placeholder="Content"
+                  style="font-size: 1.3vw" field="*{content}"></textarea>
+            </div>
+            <button type="submit" name="submit" value="submit" class="btn effect01" style="color: #FFFFFF">Send</button>
+        </form>
+    <script>
+        window.onload = function () {
+            CKEDITOR.replace('myeditor');
+        };
+    </script>
 </body>
 </html>
