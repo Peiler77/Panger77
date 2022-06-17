@@ -1,5 +1,4 @@
 # Panger77
 A blog site and web application for creating and editing posts, saving publications to a database, based on Spring Boot, Hibernate, PostgreSQL and JS.
 
-![Animation4](https://user-images.githubusercontent.com/73635745/173608699-8273b2d6-379a-4914-b162-9b19e0104f5f.gif)
-
+![Animation6](https://user-images.githubusercontent.com/73635745/174276522-f328e28c-5569-488d-a060-4b76a2616b74.gif)
