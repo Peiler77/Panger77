@@ -24,13 +24,15 @@
         <a href="/">Sign Up</a>
     </div>
 </div>
-<div class="container" th:each="post: ${posts}" >
+<div class="container" th:each="post: ${posts}">
+    <div>
         <h1 th:text="${post.title}">Title</h1>
         <p th:text="${post.date}">Date</p>
         <p th:utext="${post.content}">Content</p>
-        <a th:href="@{/removeById(id=${post.id})}">
-            <button class="btn effect01">Remove</button>
-        </a
+    </div>
+    <a th:href="@{/removeById(id=${post.id})}">
+        <button class="btn effect01">Remove</button>
+    </a>
 </div>
 </body>
 </html>

@@ -17,3 +17,10 @@
     border: 1.5px solid #0003;
     box-shadow: 0 0 50px #0003;
 }
+
+.content-container {
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
