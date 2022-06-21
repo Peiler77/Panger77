@@ -16,7 +16,7 @@
     color: #000;
     text-decoration: none;
   }
-  
+
   /*btn_background*/
   .effect01 {
     color: #FFF;
@@ -33,7 +33,7 @@
     background-color: rgb(233, 38, 38);
     box-shadow:0px 0px 0px 4px rgb(192, 38, 38) inset;
   }
-  
+
   /*btn_text*/
   .effect01 span {
     transition: all 0.09s ease-out;
@@ -43,7 +43,7 @@
     letter-spacing: 0.13em;
     color: #333;
   }
-  
+
   /*highlight*/
   .effect01:after {
     background: rgb(218, 33, 33);
